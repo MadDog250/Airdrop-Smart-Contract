@@ -12,11 +12,14 @@ This is our Main Contract file which you need to deploy. You can customize contr
 ##### migrations/1_initial_migration.js
 If you update Smart Contract to take constructor parameters, you need to specify in this file.
 
+##### truffleconfig.js
+Update 'require(dotenv)' path to your directory
+
 ##### src/airdrop.csv
 List of Addresses you want to airdrop tokens to. (Sample file included, you can also download list from bscscan,etherscan)
 
 ##### src/airdrop.js
-This is a node script to interect with deployed airdrop smart contract. It reads list of airdrop beneficiaries and airdrops token in batch size you have specified. in ```init3``` function you need to specify deployed smart contract address.
+This is a node script to interect with deployed airdrop smart contract. It reads list of airdrop beneficiaries and airdrops token in batch size you have specified. in ```init3``` function you need to specify deployed smart contract address and update 'require(dotenv)' path to your directory.
 
 ##### src/test.jsx
 This is a node script tested using replit. Does approval from metamask and takes user input of addresses and amount to send with a UI.
