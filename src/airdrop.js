@@ -1,4 +1,4 @@
-require('dotenv').config({ path: 'C:/Users/Admin/AD/.env' });
+require('dotenv').config({ path: 'yourpath/.env' });
 const Web3 = require('web3');
 const Provider = require('@truffle/hdwallet-provider');
 const MyContract = require('../build/contracts/Airdrop.json');
