@@ -21,8 +21,8 @@ List of Addresses you want to airdrop tokens to. (Sample file included, you can 
 ##### src/airdrop.js
 This is a node script to interect with deployed airdrop smart contract. It reads list of airdrop beneficiaries and airdrops token in batch size you have specified. in ```init3``` function you need to specify deployed smart contract address and update 'require(dotenv)' path to your directory.
 
-##### src/test.jsx
-This is a node script tested using replit. Does approval from metamask and takes user input of addresses and amount to send with a UI.
+##### src/App.jsx
+This is a node script tested using Replit. Does approval from metamask and takes user input of addresses and amount to send with a UI.
 
 ##### .env
 File which contains 12 secret mnemonic phrases of your hd wallet in SEED_PHRASE variable.
@@ -38,7 +38,7 @@ File which contains 12 secret mnemonic phrases of your hd wallet in SEED_PHRASE 
 
 ##### Approve
  - If using airdrop.js approve smart contract to send alloted tokens.
- - If using test.jsx user will be prompted to approve when selecting 'Execute' button on UI.
+ - If using App.jsx user will be prompted to approve when selecting 'Execute' button on UI.
 
 ##### Token Airdrop
  -If airdrop.js 
@@ -48,7 +48,7 @@ File which contains 12 secret mnemonic phrases of your hd wallet in SEED_PHRASE 
     - Run ```node airdrop.js```
     - Done Script will start airdroping tokens. Dont forget to set gas price you want and maintain balance into your wallet.
     
- -If test.jsx
+ -If App.jsx via Replit
     - After prompted to aprrove use of token when selecting 'Execute', Dapp should execute airdrop.
 
 ## Authors
