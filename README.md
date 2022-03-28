@@ -12,7 +12,7 @@ This is our Main Contract file which you need to deploy. You can customize contr
 ##### migrations/1_initial_migration.js
 If you update Smart Contract to take constructor parameters, you need to specify in this file.
 
-##### truffleconfig.js
+##### truffle-config.js
 Update 'require(dotenv)' path to your directory
 
 ##### src/airdrop.csv
