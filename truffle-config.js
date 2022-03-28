@@ -1,6 +1,7 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 const fs = require('fs');
-const mnemonic = 'frequent screen brother cook payment scout depth area journey blur behave hard';
+require('dotenv').config({ path: 'yourpath/.env' });
+const mnemonic = process.env.MNEMONIC;
 
 module.exports = {
   // Uncommenting the defaults below 
