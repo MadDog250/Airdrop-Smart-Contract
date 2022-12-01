@@ -1,12 +1,10 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.7.0;
+pragma solidity ^0.8.0;
 import "@openzeppelin/contracts/access/Ownable.sol";
-import "@openzeppelin/contracts/math/SafeMath.sol";
-import "./Token.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
 
 contract Airdrop is Ownable {
-    using SafeMath for uint;
 
     address public tokenAddr;
     uint256 public amount;
@@ -20,8 +18,8 @@ contract Airdrop is Ownable {
         tokenAddr = _tokenAddr;
         for (uint i = 0; i < _recipients.length; i++) {
             require(_recipients[i] != address(0));
-            require(Token(tokenAddr).allowance(msg.sender, contractAddr) > 0, "fail");
-            require(Token(tokenAddr).transferFrom(msg.sender, _recipients[i], amount), "no transfer");
+            require(IERC20(tokenAddr).allowance(msg.sender, contractAddr) > 0, "fail");
+            require(IERC20(tokenAddr).transferFrom(msg.sender, _recipients[i], amount), "no transfer");
         }
 
         return true;
